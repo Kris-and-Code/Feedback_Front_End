@@ -1,1 +1,59 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="new-chat">
+                <span>+ New chat</span>
+            </button>
+            <div class="chat-history">
+                <!-- Chat history items will be added here -->
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <h1>AI Chat Assistant</h1>
+                        <p>How can I help you today?</p>
+                    </div>
+                </div>
+                
+                <div class="input-area">
+                    <form id="chatForm" class="chat-form">
+                        <div class="input-container">
+                            <textarea 
+                                id="userInput" 
+                                placeholder="Send a message..."
+                                rows="1"
+                                required
+                            ></textarea>
+                            <button type="submit" class="send-button">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" 
+                                        stroke-width="2" 
+                                        stroke-linecap="round" 
+                                        stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-info">
+                            Press Enter to send, Shift + Enter for new line
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
